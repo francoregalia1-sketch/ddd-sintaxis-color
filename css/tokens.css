@@ -1,0 +1,70 @@
+/* Design System GEAP / FAUD-UNMdP · Coherente con ddd.geapmdp.com.ar/ostwald24 */
+:root {
+  --bg: #F5F4F0;
+  --surface: #FFFFFF;
+  --surface-muted: #EFECE6;
+  --surface-hover: #FAF9F6;
+  --border: #E2E0DA;
+  --border-strong: #C7C3B8;
+  --ink: #181816;
+  --ink-secondary: #5E5B54;
+  --ink-muted: #848078;
+
+  --accent: #181816;
+  --accent-ink: #FFFFFF;
+
+  --c-cyan: #00A0DE;
+  --c-magenta: #E2007A;
+  --c-yellow: #FFE900;
+  --c-red: #E20000;
+  --c-green: #009200;
+  --c-blue: #00006A;
+  --c-black: #181816;
+  --c-white: #FFFFFF;
+
+  --radius-card: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
