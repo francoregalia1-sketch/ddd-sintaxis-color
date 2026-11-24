@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sintaxis del Color · Dispositivo Didáctico Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="header-top">
+        <div>
+          <p class="eyebrow">Teoría del Color · Sintaxis del Color · Lenguaje Proyectual 2</p>
+          <h1 class="site-title">Sintaxis del Color</h1>
+          <p class="site-subtitle">Sistemas de Armonías: Munsell · Janello–Caivano · Itten · Probador en Trama</p>
+          <p class="site-lead">
+            Explorá interactivamente cómo se organizan, equilibran y aplican todas las armonías cromáticas de las teóricas en mezcla sustractiva (CMY puro) o aditiva (RGB).
+          </p>
+        </div>
+
+        <div class="header-controls">
+          <div class="pill-switch" role="group" aria-label="Modelo de color">
+            <button type="button" data-global-model="rgb" aria-pressed="false">
+              Luz
+              <small>RGB</small>
+            </button>
+            <button type="button" data-global-model="cmy" aria-pressed="true">
+              Pigmento
+              <small>CMY</small>
+            </button>
+          </div>
+
+          <a class="ostwald-link" href="https://ddd.geapmdp.com.ar/ostwald24/" target="_blank" rel="noopener noreferrer">
+            Abrir Sólido de Ostwald 24 ↗
+          </a>
+        </div>
+      </div>
+
+      <nav class="module-nav" role="tablist" aria-label="Sistemas de Armonías">
+        <button type="button" class="module-tab" role="tab" data-tab="munsell" aria-selected="true">
+          <span>Munsell</span>
+          <span class="tab-tag">9 armonías · N5</span>
+        </button>
+        <button type="button" class="module-tab" role="tab" data-tab="janello" aria-selected="false">
+          <span>Janello–Caivano</span>
+          <span class="tab-tag">Matriz 8 casos</span>
+        </button>
+        <button type="button" class="module-tab" role="tab" data-tab="itten" aria-selected="false">
+          <span>Itten</span>
+          <span class="tab-tag">Polígonos · 7 contrastes</span>
+        </button>
+        <button type="button" class="module-tab" role="tab" data-tab="pattern" aria-selected="false">
+          <span>Probador en Trama</span>
+          <span class="tab-tag">Aplicación TP1/TP4</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="app-view" aria-live="polite"></main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div>
+        Dispositivo Didáctico Digital de apoyo para <strong>Lenguaje Proyectual 2 · Diseño Industrial (FAUD – UNMdP)</strong> · Hermano visual de <a href="https://ddd.geapmdp.com.ar/ostwald24/" target="_blank" rel="noopener noreferrer">ddd.geapmdp.com.ar/ostwald24</a>.
+      </div>
+
+      <div class="footer-details">
+        <details>
+          <summary>Información sobre el criterio técnico CMY y Código Visual</summary>
+          <ul>
+            <li>Todas las muestras del modo <strong>Pigmento CMY</strong> operan con mezcla sustractiva pura de Cian, Magenta y Amarillo (<span class="mono">K_tinta = 0%</span>), donde <span class="mono">W + Cr + K = 100%</span>.</li>
+            <li>Tabla oficial de equivalencias: <span class="mono">0%=0 · 12,5%=32 · 25%=64 · 37,5%=96 · 50%=127/8 · 62,5%=158/9 · 75%=191 · 87,5%=223 · 100%=255</span>.</li>
+            <li>El modo <strong>Munsell Original</strong> calcula muestras perceptuales mediante conversión CIE LCh → sRGB (D65) respetando los perfiles asimétricos de croma máximo.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Bibliografía de referencia (Guía TP4 · Cátedra LP2)</summary>
+          <ul>
+            <li>Caivano, J. L. (1995). <em>Sistemas de orden del color</em>. Serie Difusión Nº 12, SICyT, FADU, UBA.</li>
+            <li>Caivano, J. L. (2004). <em>Armonías del color</em>. Revista GAC Nº 19, Grupo Argentino del Color, pp. 2–21.</li>
+            <li>Giglio, M. P. (2015). <em>Consideraciones sobre el Sistema de ordenamiento del color en el contexto de las prácticas de Lenguaje Proyectual II</em>. FAUD, UNMdP.</li>
+            <li>Itten, J. (1992). <em>El arte del color</em>. México DF: Limusa / Editorial GG.</li>
+            <li>Munsell, A. H. &amp; Cleland, T. M. (1921). <em>A Grammar of Color</em>.</li>
+          </ul>
+        </details>
+      </div>
+    </footer>
+  </div>
+
+  <script defer src="js/core/color-engine.js"></script>
+  <script defer src="js/core/wheels-data.js"></script>
+  <script defer src="js/core/munsell-data.js"></script>
+  <script defer src="js/ui/bars-svg.js"></script>
+  <script defer src="js/ui/wheel-svg.js"></script>
+  <script defer src="js/ui/plate-exporter.js"></script>
+  <script defer src="js/modules/munsell-view.js"></script>
+  <script defer src="js/modules/janello-view.js"></script>
+  <script defer src="js/modules/itten-view.js"></script>
+  <script defer src="js/modules/pattern-lab.js"></script>
+  <script defer src="js/modules/app.js"></script>
+</body>
+</html>
